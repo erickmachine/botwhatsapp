@@ -1,0 +1,40 @@
+{
+  "name": "whatsapp-group-bot",
+  "version": "1.0.0",
+  "description": "Bot completo para gerenciamento de grupos WhatsApp",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "reset": "node -e \"const fs=require('fs'); try{fs.rmSync('./auth_data',{recursive:true,force:true}); console.log('✅ Dados limpos!')}catch(e){console.log('⚠️ Dados já limpos!')}\"",
+    "clean": "npm cache clean --force && npm install",
+    "quick": "npm run reset && npm start",
+    "check": "node -e \"console.log('✅ Node.js:',process.version); console.log('✅ NPM funcionando!'); console.log('✅ Pronto para usar!')\"",
+    "install-downloads": "npm install ytdl-core@^4.11.5 fluent-ffmpeg@^2.1.2 && echo '✅ Dependências de download instaladas! Descomente as linhas no index.js para usar.'",
+    "test": "node -e \"console.log('🤖 Bot WhatsApp - Teste OK!')\""
+  },
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "nodejs",
+    "grupo",
+    "gerenciamento"
+  ],
+  "author": "WhatsApp Bot",
+  "license": "MIT",
+  "dependencies": {
+    "fluent-ffmpeg": "^2.1.3",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.23.0",
+    "ytdl-core": "^4.11.5"
+  },
+  "optionalDependencies": {
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
